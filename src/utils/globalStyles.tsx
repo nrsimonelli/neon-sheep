@@ -5,18 +5,17 @@ export const globalStyles = globalCss({
     boxSizing: 'border-box',
   },
   html: {
-    lineHeight: 1.15,
     textSizeAdjust: '100%',
     tabSize: 4,
   },
   body: {
     margin: 0,
     fontFamily: '$untitled',
-    backgroundColor: '$gray500',
+    lineHeight: '$body',
   },
   code: {
     fontFamily: '$mono',
-    fontSize: '1em',
+    fontSize: '$3',
   },
   a: {
     color: 'inherit',
