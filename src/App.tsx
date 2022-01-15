@@ -7,6 +7,8 @@ import moon from './moon.svg';
 import { globalStyles } from './utils/globalStyles';
 import { useAppDispatch, useAppSelector } from './utils/hooks';
 import { Layout } from './components/Layout';
+import { Button } from './components/Button';
+import { Flex } from './components/Flex';
 
 const App = () => {
   globalStyles();
@@ -31,6 +33,17 @@ const App = () => {
           </button>
           <ThemeToggle />
         </p>
+        <Flex justify={'center'} css={{ '& Button': { mr: '$3' } }}>
+          <Button size={'2'} variant={'base'} color={'base'}>
+            Hello
+          </Button>
+          <Button size={'2'} variant={'hot'} color={'base'}>
+            Hello
+          </Button>
+          <Button size={'2'} variant={'ghost'} color={'base'}>
+            Hello
+          </Button>
+        </Flex>
       </Container>
     </Layout>
   );
