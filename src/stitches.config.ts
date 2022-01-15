@@ -119,7 +119,6 @@ export const { styled, config, theme, createTheme, globalCss } =
         accent11: '$sky11',
         accent12: '$sky12',
       },
-
       space: {
         0: 0,
         1: '4px',

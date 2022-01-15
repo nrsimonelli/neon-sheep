@@ -17,7 +17,8 @@ export const Button = styled('button', {
   justifyContent: 'center',
   lineHeight: '1',
   WebkitTaphighlightColor: 'rgba(0,0,0,0)',
-  p: '$2',
+  py: '12px',
+  px: '20px',
 
   '&:disabled': {
     backgroundColor: '$base2',
@@ -77,15 +78,14 @@ export const Button = styled('button', {
       variant: 'ghost',
       color: 'primary',
       css: {
-        backgroundColor: '$primary1',
-        boxShadow: 'inset 0 0 0 1px $colors$primary7',
+        bg: 'transparent',
+        boxShadow: 'inset 0 0 0 1px $colors$primary8',
         '&:hover': {
-          // backgroundColor: '$primary1',
-          boxShadow: 'inset 0 0 0 1px $colors$primary8',
+          boxShadow: 'inset 0 0 0 1px $colors$primary9',
         },
         '&:focus': {
           boxShadow:
-            'inset 0 0 0 1px $colors$primary8, 0 0 0 1px $colors$primary8',
+            'inset 0 0 0 1px $colors$primary9, 0 0 0 1px $colors$primary9',
         },
       },
     },
@@ -111,21 +111,65 @@ export const Button = styled('button', {
         '&:active': {
           backgroundColor: '$primary6',
         },
+        '&:focus': {
+          boxShadow: 'inset 0 0 0 1px $colors$primary11',
+        },
+      },
+    },
+    {
+      variant: 'ghost',
+      color: 'secondary',
+      css: {
+        bg: 'transparent',
+        boxShadow: 'inset 0 0 0 1px $colors$secondary8',
+        '&:hover': {
+          boxShadow: 'inset 0 0 0 1px $colors$secondary9',
+        },
+        '&:focus': {
+          boxShadow:
+            'inset 0 0 0 1px $colors$secondary9, 0 0 0 1px $colors$secondary9',
+        },
+      },
+    },
+    {
+      variant: 'hot',
+      color: 'secondary',
+      css: {
+        color: '$white',
+        backgroundColor: '$secondary9',
+        '&:hover': {
+          backgroundColor: '$secondary10',
+        },
+      },
+    },
+    {
+      variant: 'base',
+      color: 'secondary',
+      css: {
+        backgroundColor: '$secondary4',
+        '&:hover': {
+          backgroundColor: '$secondary5',
+        },
+        '&:active': {
+          backgroundColor: '$secondary6',
+        },
+        '&:focus': {
+          boxShadow: 'inset 0 0 0 1px $colors$secondary11',
+        },
       },
     },
     {
       variant: 'ghost',
       color: 'base',
       css: {
-        backgroundColor: '$base1',
-        boxShadow: 'inset 0 0 0 1px $colors$base7',
+        bg: 'transparent',
+        boxShadow: 'inset 0 0 0 1px $colors$base8',
         '&:hover': {
-          // backgroundColor: '$base1',
-          boxShadow: 'inset 0 0 0 1px $colors$base8',
+          boxShadow: 'inset 0 0 0 1px $colors$base9',
         },
-        '&:active': {
+        '&:focus': {
           boxShadow:
-            'inset 0 0 0 1px $colors$base8, 0 0 0 1px $colors$base8',
+            'inset 0 0 0 1px $colors$base9, 0 0 0 1px $colors$base9',
         },
       },
     },
@@ -137,9 +181,6 @@ export const Button = styled('button', {
         backgroundColor: '$base9',
         '&:hover': {
           backgroundColor: '$base10',
-        },
-        '&:active': {
-          backgroundColor: '$base11',
         },
       },
     },
@@ -153,6 +194,51 @@ export const Button = styled('button', {
         },
         '&:active': {
           backgroundColor: '$base6',
+        },
+        '&:focus': {
+          boxShadow: 'inset 0 0 0 1px $colors$base11',
+        },
+      },
+    },
+    {
+      variant: 'ghost',
+      color: 'accent',
+      css: {
+        bg: 'transparent',
+        boxShadow: 'inset 0 0 0 1px $colors$accent8',
+        '&:hover': {
+          boxShadow: 'inset 0 0 0 1px $colors$accent9',
+        },
+        '&:focus': {
+          boxShadow:
+            'inset 0 0 0 1px $colors$accent9, 0 0 0 1px $colors$accent9',
+        },
+      },
+    },
+    {
+      variant: 'hot',
+      color: 'accent',
+      css: {
+        color: '$white',
+        backgroundColor: '$accent9',
+        '&:hover': {
+          backgroundColor: '$accent10',
+        },
+      },
+    },
+    {
+      variant: 'base',
+      color: 'accent',
+      css: {
+        backgroundColor: '$accent4',
+        '&:hover': {
+          backgroundColor: '$accent5',
+        },
+        '&:active': {
+          backgroundColor: '$accent6',
+        },
+        '&:focus': {
+          boxShadow: 'inset 0 0 0 1px $colors$accent11',
         },
       },
     },

@@ -33,14 +33,20 @@ const App = () => {
           </button>
           <ThemeToggle />
         </p>
+
         <Flex justify={'center'} css={{ '& Button': { mr: '$3' } }}>
-          <Button size={'2'} variant={'base'} color={'base'}>
+          <Button
+            size={'3'}
+            variant={'base'}
+            color={'secondary'}
+            shape={'5'}
+          >
+            Overview
+          </Button>
+          <Button size={'3'} variant={'hot'} color={'secondary'}>
             Hello
           </Button>
-          <Button size={'2'} variant={'hot'} color={'base'}>
-            Hello
-          </Button>
-          <Button size={'2'} variant={'ghost'} color={'base'}>
+          <Button size={'3'} variant={'ghost'} color={'secondary'}>
             Hello
           </Button>
         </Flex>
