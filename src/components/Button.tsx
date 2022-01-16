@@ -98,6 +98,9 @@ export const Button = styled('button', {
         '&:hover': {
           backgroundColor: '$primary10',
         },
+        '&:active': {
+          backgroundColor: '$primary9',
+        },
       },
     },
     {
@@ -219,7 +222,7 @@ export const Button = styled('button', {
       variant: 'hot',
       color: 'accent',
       css: {
-        color: '$white',
+        color: '$black',
         backgroundColor: '$accent9',
         '&:hover': {
           backgroundColor: '$accent10',

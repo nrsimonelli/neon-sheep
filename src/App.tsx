@@ -50,6 +50,44 @@ const App = () => {
             Hello
           </Button>
         </Flex>
+        <Flex
+          justify={'center'}
+          css={{ mt: '$3', '& Button': { mr: '$3' } }}
+        >
+          <Button
+            size={'3'}
+            variant={'base'}
+            color={'primary'}
+            shape={'5'}
+          >
+            Overview
+          </Button>
+          <Button size={'3'} variant={'hot'} color={'primary'}>
+            Hello
+          </Button>
+          <Button size={'3'} variant={'ghost'} color={'primary'}>
+            Hello
+          </Button>
+        </Flex>
+        <Flex
+          justify={'center'}
+          css={{ mt: '$3', '& Button': { mr: '$3' } }}
+        >
+          <Button
+            size={'3'}
+            variant={'base'}
+            color={'accent'}
+            shape={'5'}
+          >
+            Overview
+          </Button>
+          <Button size={'3'} variant={'hot'} color={'accent'}>
+            Hello
+          </Button>
+          <Button size={'3'} variant={'ghost'} color={'accent'}>
+            Hello
+          </Button>
+        </Flex>
       </Container>
     </Layout>
   );
