@@ -27,11 +27,52 @@ export const Button = styled('button', {
     pointerEvents: 'none',
   },
 
+  // locally scoped colors for easy variants
+  $$bc4: '$colors$primary4',
+  $$bc5: '$colors$primary5',
+  $$bc6: '$colors$primary6',
+  $$bc7: '$colors$primary7',
+  $$bc8: '$colors$primary8',
+  $$bc9: '$colors$primary9',
+  $$bc10: '$colors$primary10',
+  $$bc11: '$colors$primary11',
+
   variants: {
     variant: {
-      ghost: {},
-      hot: {},
-      base: {},
+      primary: {
+        color: '$white',
+        backgroundColor: '$$bc9',
+        '&:hover': {
+          backgroundColor: '$$bc10',
+        },
+        '&:active': {
+          backgroundColor: '$$bc9',
+        },
+      },
+      secondary: {
+        color: '$$bc11',
+        backgroundColor: '$$bc4',
+        '&:hover': {
+          backgroundColor: '$$bc5',
+        },
+        '&:active': {
+          backgroundColor: '$$bc6',
+        },
+        '&:focus': {
+          boxShadow: 'inset 0 0 0 1px $$bc11',
+        },
+      },
+      outline: {
+        bg: 'transparent',
+        color: '$$bc11',
+        boxShadow: 'inset 0 0 0 1px $$bc8',
+        '&:hover': {
+          boxShadow: 'inset 0 0 0 1px $$bc9',
+        },
+        '&:focus': {
+          boxShadow: 'inset 0 0 0 1px $$bc9, 0 0 0 1px $$bc9',
+        },
+      },
     },
     shape: {
       0: {
@@ -54,202 +95,14 @@ export const Button = styled('button', {
       },
     },
     size: {
-      1: { fontSize: '$1' },
-      2: { fontSize: '$2' },
-      3: { fontSize: '$3' },
-    },
-    color: {
-      primary: {
-        color: '$primary11',
-      },
-      secondary: {
-        color: '$secondary11',
-      },
-      accent: {
-        color: '$accent11',
-      },
-      base: {
-        color: '$base11',
-      },
+      1: { fontSize: '$2' },
+      2: { fontSize: '$3' },
+      3: { fontSize: '$4' },
     },
   },
-  compoundVariants: [
-    {
-      variant: 'ghost',
-      color: 'primary',
-      css: {
-        bg: 'transparent',
-        boxShadow: 'inset 0 0 0 1px $colors$primary8',
-        '&:hover': {
-          boxShadow: 'inset 0 0 0 1px $colors$primary9',
-        },
-        '&:focus': {
-          boxShadow:
-            'inset 0 0 0 1px $colors$primary9, 0 0 0 1px $colors$primary9',
-        },
-      },
-    },
-    {
-      variant: 'hot',
-      color: 'primary',
-      css: {
-        color: '$white',
-        backgroundColor: '$primary9',
-        '&:hover': {
-          backgroundColor: '$primary10',
-        },
-        '&:active': {
-          backgroundColor: '$primary9',
-        },
-      },
-    },
-    {
-      variant: 'base',
-      color: 'primary',
-      css: {
-        backgroundColor: '$primary4',
-        '&:hover': {
-          backgroundColor: '$primary5',
-        },
-        '&:active': {
-          backgroundColor: '$primary6',
-        },
-        '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$primary11',
-        },
-      },
-    },
-    {
-      variant: 'ghost',
-      color: 'secondary',
-      css: {
-        bg: 'transparent',
-        boxShadow: 'inset 0 0 0 1px $colors$secondary8',
-        '&:hover': {
-          boxShadow: 'inset 0 0 0 1px $colors$secondary9',
-        },
-        '&:focus': {
-          boxShadow:
-            'inset 0 0 0 1px $colors$secondary9, 0 0 0 1px $colors$secondary9',
-        },
-      },
-    },
-    {
-      variant: 'hot',
-      color: 'secondary',
-      css: {
-        color: '$white',
-        backgroundColor: '$secondary9',
-        '&:hover': {
-          backgroundColor: '$secondary10',
-        },
-      },
-    },
-    {
-      variant: 'base',
-      color: 'secondary',
-      css: {
-        backgroundColor: '$secondary4',
-        '&:hover': {
-          backgroundColor: '$secondary5',
-        },
-        '&:active': {
-          backgroundColor: '$secondary6',
-        },
-        '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$secondary11',
-        },
-      },
-    },
-    {
-      variant: 'ghost',
-      color: 'base',
-      css: {
-        bg: 'transparent',
-        boxShadow: 'inset 0 0 0 1px $colors$base8',
-        '&:hover': {
-          boxShadow: 'inset 0 0 0 1px $colors$base9',
-        },
-        '&:focus': {
-          boxShadow:
-            'inset 0 0 0 1px $colors$base9, 0 0 0 1px $colors$base9',
-        },
-      },
-    },
-    {
-      variant: 'hot',
-      color: 'base',
-      css: {
-        color: '$white',
-        backgroundColor: '$base9',
-        '&:hover': {
-          backgroundColor: '$base10',
-        },
-      },
-    },
-    {
-      variant: 'base',
-      color: 'base',
-      css: {
-        backgroundColor: '$base4',
-        '&:hover': {
-          backgroundColor: '$base5',
-        },
-        '&:active': {
-          backgroundColor: '$base6',
-        },
-        '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$base11',
-        },
-      },
-    },
-    {
-      variant: 'ghost',
-      color: 'accent',
-      css: {
-        bg: 'transparent',
-        boxShadow: 'inset 0 0 0 1px $colors$accent8',
-        '&:hover': {
-          boxShadow: 'inset 0 0 0 1px $colors$accent9',
-        },
-        '&:focus': {
-          boxShadow:
-            'inset 0 0 0 1px $colors$accent9, 0 0 0 1px $colors$accent9',
-        },
-      },
-    },
-    {
-      variant: 'hot',
-      color: 'accent',
-      css: {
-        color: '$black',
-        backgroundColor: '$accent9',
-        '&:hover': {
-          backgroundColor: '$accent10',
-        },
-      },
-    },
-    {
-      variant: 'base',
-      color: 'accent',
-      css: {
-        backgroundColor: '$accent4',
-        '&:hover': {
-          backgroundColor: '$accent5',
-        },
-        '&:active': {
-          backgroundColor: '$accent6',
-        },
-        '&:focus': {
-          boxShadow: 'inset 0 0 0 1px $colors$accent11',
-        },
-      },
-    },
-  ],
   defaultVariants: {
+    variant: 'secondary',
+    size: '2',
     shape: '1',
-    size: '1',
-    color: 'primary',
-    variant: 'base',
   },
 });
