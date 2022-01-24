@@ -1,57 +1,39 @@
-import { useState } from 'react';
-import { Box } from './components/Box';
+import React from 'react';
+import moon from './moon.svg';
+
+import { Routes, Route } from 'react-router-dom';
+
 import { Text } from './components/Text';
 import { Container } from './components/Container';
 import { ThemeToggle } from './components/ThemeToggle';
-import moon from './moon.svg';
 import { globalStyles } from './utils/globalStyles';
-import { useAppDispatch, useAppSelector } from './utils/hooks';
-import { Layout } from './components/Layout';
+import { Box } from './components/Box';
 import { Button } from './components/Button';
 import { Flex } from './components/Flex';
+
 import { styled } from './stitches.config';
+import Leaderboard from './pages/Leaderboard/Leaderboard';
+import PlayerProfile from './pages/PlayerProfile/PlayerProfile';
+import Tournament from './pages/Tournament/Tournament';
+import Hero from './pages/Hero/Hero';
+import { GlobalLayout } from './layouts/GlobalLayout';
 
 const App = () => {
   globalStyles();
-  const dispatch = useAppDispatch();
-  const themeString = useAppSelector((state) => state.theme.theme);
-
-  const [count, setCount] = useState(0);
-
-  const Img = styled('img', {});
+  // const dispatch = useAppDispatch();
+  // const themeString = useAppSelector((state) => state.theme.theme);
 
   return (
-    <Layout>
-      <Container
-        variant={'2'}
-        css={{ bg: '$appBg3', minHeight: '$vh' }}
-      >
-        <Flex
-          direction={'column'}
-          justify={'center'}
-          align={'center'}
-        >
-          <Img src={moon} alt='logo' />
-
-          <Box visible css={{ zIndex: '$2' }}>
-            <Text>Neon Sheep</Text>
-          </Box>
-          <ThemeToggle />
-
-          <Flex justify={'center'} css={{ '& Button': { mr: '$3' } }}>
-            <Button size={'2'} variant={'secondary'}>
-              Overview
-            </Button>
-            <Button size={'2'} variant={'primary'}>
-              Hello
-            </Button>
-            <Button size={'2'} variant={'outline'}>
-              Hello
-            </Button>
-          </Flex>
-        </Flex>
-      </Container>
-    </Layout>
+    <>
+      <Routes>
+        <Route path='/' element={<GlobalLayout />}>
+          <Route index element={<Hero />} />
+          <Route path='leaderboard' element={<Leaderboard />} />
+          <Route path='tournaments' element={<Tournament />} />
+          <Route path='profile' element={<PlayerProfile />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 
