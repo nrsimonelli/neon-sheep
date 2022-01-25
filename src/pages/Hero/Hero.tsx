@@ -15,35 +15,23 @@ const Hero = () => {
   });
 
   return (
-    <Gradient>
-      <Container
-        variant={'2'}
-        css={{ bg: '$appBg3', minHeight: '$vh' }}
-      >
+    <Flex css={{ flex: 1 }}>
+      <Container variant={'1'} visible>
         <Flex
           direction={'column'}
           justify={'center'}
           align={'center'}
         >
           <Img src={moon} alt='logo' />
-          <Box visible css={{ zIndex: '$2' }}>
+          <Box>
             <Text>Neon Sheep</Text>
           </Box>
-          <ThemeToggle />
-          <Flex justify={'center'} css={{ '& Button': { mr: '$3' } }}>
-            <Button size={'2'} variant={'secondary'}>
-              Overview
-            </Button>
-            <Button size={'2'} variant={'primary'}>
-              Hello
-            </Button>
-            <Button size={'2'} variant={'outline'}>
-              Hello
-            </Button>
+          <Flex justify={'center'}>
+            <ThemeToggle />
           </Flex>
         </Flex>
       </Container>
-    </Gradient>
+    </Flex>
   );
 };
 

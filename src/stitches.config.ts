@@ -65,7 +65,7 @@ export const { styled, config, theme, createTheme, globalCss } =
         black: '$blackA12',
 
         gradient1: '$appBg1',
-        gradient2: '$appBg2',
+        gradient2: '$appBg3',
 
         base1: '$slate1',
         base2: '$slate2',
@@ -305,7 +305,7 @@ export const darkTheme = createTheme('dark-theme', {
     black: '$blackA12',
 
     gradient1: '$appBg1',
-    gradient2: '$appBg2',
+    gradient2: '$appBg3',
 
     base1: '$slate1',
     base2: '$slate2',

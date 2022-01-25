@@ -16,7 +16,7 @@ import Leaderboard from './pages/Leaderboard/Leaderboard';
 import PlayerProfile from './pages/PlayerProfile/PlayerProfile';
 import Tournament from './pages/Tournament/Tournament';
 import Hero from './pages/Hero/Hero';
-import { GlobalLayout } from './layouts/GlobalLayout';
+import { GlobalLayout } from './layouts/Layouts';
 
 const App = () => {
   globalStyles();
@@ -24,16 +24,14 @@ const App = () => {
   // const themeString = useAppSelector((state) => state.theme.theme);
 
   return (
-    <>
-      <Routes>
-        <Route path='/' element={<GlobalLayout />}>
-          <Route index element={<Hero />} />
-          <Route path='leaderboard' element={<Leaderboard />} />
-          <Route path='tournaments' element={<Tournament />} />
-          <Route path='profile' element={<PlayerProfile />} />
-        </Route>
-      </Routes>
-    </>
+    <Routes>
+      <Route path='/' element={<GlobalLayout />}>
+        <Route index element={<Hero />} />
+        <Route path='leaderboard' element={<Leaderboard />} />
+        <Route path='tournaments' element={<Tournament />} />
+        <Route path='profile' element={<PlayerProfile />} />
+      </Route>
+    </Routes>
   );
 };
 

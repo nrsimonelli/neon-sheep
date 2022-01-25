@@ -34,7 +34,6 @@ export const Container = styled('div', {
     },
     visible: {
       true: {
-        bg: '$appBg3',
         boxShadow: 'inset 0 0 0 1px $colors$base8',
       },
     },

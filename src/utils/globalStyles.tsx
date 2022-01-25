@@ -12,6 +12,8 @@ export const globalStyles = globalCss({
     margin: 0,
     fontFamily: '$untitled',
     lineHeight: '$body',
+    bg: '$appBg1',
+    color: '$hiContrast',
   },
   code: {
     fontFamily: '$mono',

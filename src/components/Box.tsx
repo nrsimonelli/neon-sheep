@@ -14,7 +14,6 @@ export const Box = styled('div', {
     },
     visible: {
       true: {
-        bg: '$info2',
         boxShadow: 'inset 0 0 0 2px $colors$error3',
       },
     },
