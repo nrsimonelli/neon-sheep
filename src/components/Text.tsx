@@ -3,6 +3,7 @@ import { styled } from '../stitches.config';
 export const Text = styled('span', {
   // local resets here
   display: 'block',
+  lineHeight: '$body',
 
   variants: {
     type: {
@@ -57,6 +58,23 @@ export const Text = styled('span', {
       },
       3: {
         fontWeight: '$3',
+      },
+    },
+    my: {
+      0: {
+        my: '$0',
+      },
+      1: {
+        my: '$1',
+      },
+      2: {
+        my: '$2',
+      },
+      3: {
+        my: '$3',
+      },
+      4: {
+        my: '$4',
       },
     },
   },

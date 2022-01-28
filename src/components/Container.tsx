@@ -3,8 +3,8 @@ import { styled } from '../stitches.config';
 export const Container = styled('div', {
   // local resets here
   flexShrink: 0,
-  mx: 'auto',
   width: '$full',
+  mx: 'auto',
 
   variants: {
     variant: {
@@ -13,7 +13,7 @@ export const Container = styled('div', {
       3: { maxWidth: '$bp3' },
       4: { maxWidth: '$bp4' },
       5: { maxWidth: '$bp5' },
-      full: { maxWidth: 'none' },
+      6: { maxWidth: 'none' },
       responsive: {
         '@bp1': {
           maxWidth: '$bp1',
@@ -32,13 +32,32 @@ export const Container = styled('div', {
         },
       },
     },
+    px: {
+      0: {
+        px: '$0',
+      },
+      1: {
+        px: '$1',
+      },
+      2: {
+        px: '$2',
+      },
+      3: {
+        px: '$3',
+      },
+      4: {
+        px: '$4',
+      },
+    },
     visible: {
       true: {
-        boxShadow: 'inset 0 0 0 1px $colors$base8',
+        boxShadow: 'inset 0 0 0 1px $colors$blue8',
       },
     },
   },
   defaultVariants: {
     variant: 'full',
+    px: 3,
+    visible: 'true',
   },
 });
