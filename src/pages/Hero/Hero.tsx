@@ -6,13 +6,13 @@ import { ThemeToggle } from '../../components/ThemeToggle';
 
 const Hero = () => {
   return (
-    <Flex css={{ flex: 1, bg: '$indigo5' }}>
-      <Container variant={'responsive'} visible>
+    <Flex css={{ flex: 1 }}>
+      <Container variant={'responsive'}>
         <Flex
           direction={'column'}
           justify={'start'}
           align={'start'}
-          css={{ bg: '$yellow5', height: '100%' }}
+          css={{ height: '$full' }}
         >
           <Box visible={false} variant={'1'}>
             <Text my={'3'} variant={'title'}>

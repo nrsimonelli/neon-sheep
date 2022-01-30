@@ -7,15 +7,27 @@ import { Text } from '../components/Text';
 export const GlobalLayout = () => {
   return (
     <Flex direction={'column'} css={{ minHeight: '$vh' }}>
-      <Box visible css={{ bg: '$colors$red5' }}>
-        <Container variant={'responsive'} visible>
-          <Text css={{ p: '$2' }}>Nav?</Text>
+      <Box>
+        <Container variant={'responsive'} css={{ height: '$6' }}>
+          <Flex
+            justify={'start'}
+            align={'center'}
+            css={{ height: '$full' }}
+          >
+            <Text>Nav?</Text>
+          </Flex>
         </Container>
       </Box>
       <Outlet />
-      <Box visible css={{ bg: '$colors$blue5' }}>
-        <Container variant={'1'} visible>
-          <Text css={{ p: '$2' }}>Footer?</Text>
+      <Box>
+        <Container variant={'responsive'} css={{ height: '$7' }}>
+          <Flex
+            justify={'start'}
+            align={'center'}
+            css={{ height: '$full' }}
+          >
+            <Text>Footer?</Text>
+          </Flex>
         </Container>
       </Box>
     </Flex>
