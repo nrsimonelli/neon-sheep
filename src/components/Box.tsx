@@ -22,7 +22,7 @@ export const Box = styled('div', {
     },
     visible: {
       true: {
-        boxShadow: 'inset 0 0 0 2px $colors$error3',
+        boxShadow: 'inset 0 0 0 2px $colors$red9',
       },
     },
   },

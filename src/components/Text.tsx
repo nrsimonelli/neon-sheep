@@ -3,9 +3,40 @@ import { styled } from '../stitches.config';
 export const Text = styled('span', {
   // local resets here
   display: 'block',
-  lineHeight: '$body',
 
   variants: {
+    variant: {
+      title: {
+        fontSize: '$7',
+        fontWeight: '$3',
+        lineHeight: '$2',
+      },
+      h1: {
+        fontSize: '$6',
+        fontWeight: '$2',
+        lineHeight: '$2',
+      },
+      h2: {
+        fontSize: '$5',
+        fontWeight: '$2',
+        lineHeight: '$2',
+      },
+      h3: {
+        fontSize: '$4',
+        fontWeight: '$2',
+        lineHeight: '$2',
+      },
+      default: {
+        fontSize: '$3',
+        fontWeight: '$1',
+        lineHeight: '$3',
+      },
+      bold: {
+        fontSize: '$3',
+        fontWeight: '$2',
+        lineHeight: '$3',
+      },
+    },
     type: {
       uppercase: {
         textTransform: 'uppercase',
@@ -77,5 +108,8 @@ export const Text = styled('span', {
         my: '$4',
       },
     },
+  },
+  defaultVariants: {
+    variant: 'default',
   },
 });

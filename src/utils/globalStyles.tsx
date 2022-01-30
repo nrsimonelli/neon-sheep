@@ -11,16 +11,17 @@ export const globalStyles = globalCss({
   body: {
     margin: 0,
     fontFamily: '$untitled',
-    lineHeight: '$body',
-    bg: '$appBg1',
-    color: '$hiContrast',
-  },
-  code: {
-    fontFamily: '$mono',
-    fontSize: '$3',
+    lineHeight: '$3',
+    fontWeight: '$1',
+    bg: '$slate2',
+    color: '$slate12',
   },
   a: {
     color: 'inherit',
     textDecoration: 'none',
+    '&:hover': {
+      color: '$sky11',
+      textDecoration: 'underline',
+    },
   },
 });
